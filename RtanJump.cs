@@ -19,7 +19,14 @@ public class RtanJump : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        jumpCount = 0;
+        if (collision.gameObject.tag == "ground")
+        {
+            jumpCount = 0;
+        }
+        else if (collision.gameObject.tag == "enemy")
+        {
+            SaurusMove saurus = collision.gameObject.GetComponent<SaurusMove>();
+        }
     }
 
 }
