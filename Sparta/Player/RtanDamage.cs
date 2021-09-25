@@ -22,6 +22,7 @@ public class RtanDamage : MonoBehaviour
         {
             Debug.Log("ÇÇ°Ý");
             OnDamage();
+            GameManager.I.GameOver();
         }
     }
 }

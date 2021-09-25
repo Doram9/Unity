@@ -35,6 +35,7 @@ public class SaurusMove : MonoBehaviour
         col.enabled = false;
         render.color = new Color(1, 1, 1, 0.5f);
         isDead = true;
+        GameManager.I.Score += 20;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
