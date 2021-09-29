@@ -6,7 +6,11 @@ public class RtanJump : MonoBehaviour
 {
     public Rigidbody2D rigid;
     public float jumpHeight;
-    public int jumpCount = 0;
+
+    public AudioSource audioSource;
+    public AudioClip clip;
+    int jumpCount = 0;
+
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +32,8 @@ public class RtanJump : MonoBehaviour
             SaurusMove saurus = collision.gameObject.GetComponent<SaurusMove>();
             saurus.Ondamage();
             rigid.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+            audioSource.clip = clip;
+            audioSource.Play();
         }
     }
 

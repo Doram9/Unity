@@ -25,4 +25,10 @@ public class GameManager : MonoBehaviour
     {
         GameOver_();
     }
+
+    public void AddScore(int score)
+    {
+        Score += score;
+        Debug.Log(Score);
+    }
 }
