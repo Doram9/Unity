@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,6 +21,7 @@ public class Popup_Stage : MonoBehaviour
 
     public void OnStartGame()
     {
-        SceneManager.LoadSceneAsync("GameScene");
+        //SceneManager.LoadScene("GameScene");
+        Loading.ReserveLoadScene("GameScene");
     }
 }
